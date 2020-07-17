@@ -1,5 +1,18 @@
 var mysql = require("mysql2");
+var connection;
 
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "Mina123$",
+    database: "burgers_db",
+  });
+}
+
+/*
 var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
@@ -14,6 +27,6 @@ connection.connect(function (err) {
     return;
   }
   console.log("connected as id " + connection.threadId);
-});
+}); */
 
 module.exports = connection;

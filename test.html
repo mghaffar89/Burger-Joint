@@ -45,5 +45,32 @@
     </div>
 
     {{{body}}}
+
+    <form class="new-burger-form">
+      <div class="form-group row justify-content-center">
+        <div class="col-4 text-center">
+          <input
+            type="text"
+            class="form-control"
+            id="burg"
+            placeholder="(new burger name)"
+            name="called"
+          />
+        </div>
+      </div>
+      <div class="col-12 text-center">
+        <button
+          type="submit"
+          class="btn btn-primary row justify-content-center add-burger"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+
+    {{!-- Text to prompt for a new burger name --}}
+    <div class="row justify-content-center">
+      <p>Enter a burger you have a craving for and press "Submit."</p>
+    </div>
   </body>
 </html>
